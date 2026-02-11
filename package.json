@@ -1,0 +1,19 @@
+{
+  "name": "nasa.gov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:playwright": "playwright test",
+    "test": "npm run test:playwright"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@axe-core/playwright": "^4.0.0",
+    "@types/node": "^25.2.2"
+  }
+}
