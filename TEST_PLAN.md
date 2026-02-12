@@ -15,11 +15,7 @@
 - Objective: Ensure search returns relevant results, handles empty and malformed queries, and resists injection.
 - Key checks: relevance, no server errors, proper "no results" handling.
 
-3) News / Article Pages
-- Objective: Validate article rendering, metadata, social sharing, and graceful handling of removed content.
-- Key checks: headline, author/date, images, share links, Open Graph/Twitter tags.
-
-4) Multimedia (Video & Image)
+3) Multimedia (Video & Image)
 - Objective: Verify playback controls, captions, full-screen behavior and that image downloads succeed.
 - Key checks: play/pause/seek, captions, download HTTP 200, MIME type correctness.
 
