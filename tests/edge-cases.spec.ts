@@ -45,9 +45,11 @@ test.describe("Edge Cases - General", () => {
 
   // Test with very slow network conditions
   test("should handle page with slow network", async ({ page }) => {
-    await page.context().route("**/*", (route) => {
-      setTimeout(() => route.continue(), 100);
-    });
+    await page.context().route("**/*", async (route) => {
+      await new Promise((r) => setTimeout(r, 100)); // simulate slow network
+      await route.continue();
+});
+
 
     await page.goto("./", { waitUntil: "domcontentloaded" });
     expect(await page.title()).toBeTruthy();
